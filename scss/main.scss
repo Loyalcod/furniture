@@ -1,0 +1,458 @@
+@import './configur';
+
+@font-face {
+    font-family: Overpasslight;
+    src: url('/fonts/Overpass-Regular.ttf');
+}
+@font-face {
+    font-family: OverpassBold;
+    src: url('/fonts/Overpass-ExtraBold.ttf');
+}
+
+html,body{
+    margin: 0px;
+    padding: 0px;
+    // overflow: hidden;
+}
+
+.imageone{
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 65px;
+    transform:rotateY(180deg);
+}
+
+.general{
+    width: 100%;
+    height: 1100px;
+    background-color: $primary-color;
+    @include flexCenter(column);
+
+    &__box{
+        width: 90%;
+        height: 1000px;
+        // background-color: white;
+        @include flexMatch(row);
+        gap: 25px;
+
+        @include mobile__1080{
+            @include flexMatch(column);
+        }
+
+        .mainbody{
+            width: 70%;
+            height: 100%;
+            background-color: aqua;
+
+            @include mobile__1080{
+                width: 98%;
+            }
+            // This is the  wallpaper and navigation bar
+            .mainbkg{
+                background-color: $secondary-color;
+                width: 100%;
+                height: 400px;
+                @include flexMatch(column);
+
+                @include mobile__1080{
+                    height: 250px;
+                }
+
+                .absolutelamp{
+                    width: 61%;
+                    height: 20%;
+                    position: absolute;
+                    // background-color: black;
+                    background-image: url('/images/tgone.png');
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+
+                    @include mobile__1080{
+                        width: 88%;
+                        height: 15%;
+                    }
+                }
+
+                .navigation{
+                    width: 100%;
+                    height: 60px;
+                    // background-color: black;
+                    @include flexMatch(row);
+
+                    .nameofcompany{
+                        width: 50%;
+                        height: 100%;
+                        // background-color: black;
+                        @include flexMatch(column);
+                        justify-content: center;
+                        
+                        h2{
+                            margin-left: 30px;
+                            font-family: Overpasslight;
+                            font-size: 15px;
+                            color: $text-color;
+                            letter-spacing: 1px;
+                        }
+
+                    }
+
+                    .menubar{
+                        width: 50%;
+                        height: 100%;
+                        // background-color: blue;
+                        @include flexCenter(row);
+                        gap: 20px;
+                        z-index: 1;
+
+                        .menubar_link{
+                            font-size: 12px;
+                            font-family: Overpasslight;
+                            text-decoration: none;
+                            // text-decoration: bold;
+                            color: $text-color;
+                            cursor: pointer;
+
+                            &:hover{
+                                color: $button-color;
+                            }
+
+                        }
+
+                        button{
+                            background-color: $button-color;
+                            height: 35px;
+                            width: 60px;
+                            outline: none;
+                            border: none;
+                            border-radius: 20px;
+                            color: $text-color;
+                            
+
+                            &:hover{
+                                // color: $button-color;
+                                box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
+                            }
+                        }
+                    }
+                }
+                .bkgwrite{
+                    width: 100%;
+                    margin-top: 10px;
+                    height: 80%;
+                    background-color:transparent;
+                    @include flexMatch(column);
+                    
+                    .mainwrite{
+                        width: 50%;
+                        background-color: transparent;
+                        height: 100%;
+                        @include flexCenter(column);
+
+                        .inin{
+                            width: 85%;
+                            height:65%;
+                            // background-color: white;
+                            @include flexMatch(column);
+                            // gap: 5px;
+
+                            .variations{
+                                font-family: Overpasslight;
+                                font-size: 14px;
+                                margin: 0px;
+                                padding: 0px;
+                                color: $text-color;
+                                
+                            }
+                            .beauty{
+                                font-family: OverpassBold;
+                                font-size: 32px;
+                                margin: 0px;
+                                padding: 0px;
+                                color: $text-color;
+                                margin-top: 10px;
+                            }
+
+                            .lorem{
+                                margin-top: 10px;
+                                height: 20px;
+                                font-size: 13px;
+                                font-family: Overpasslight;
+                                color: $text-color;
+
+                            }
+
+                            .dbutn{
+                                margin-top: 35px;
+
+                                .buy{
+                                    width: 120px;
+                                    height: 40px;
+                                    color: $text-color;
+                                    background-color: $button-color;
+                                    border: none;
+                                    outline: none;
+                                    border-radius: 20px;
+                                }
+
+                                .read{
+                                    width: 120px;
+                                    height: 40px;
+                                    color: $text-color;
+                                    background-color: transparent;
+                                    border: 1px solid $button-color;
+                                    outline: none;
+                                    border-radius: 20px;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+            // This is the end of wallpaper and navigation bar.
+
+            // This is the product section
+
+            .productbox{
+                width: 100%;
+                height: 110px;
+                background-color: white;
+                @include flexCenter(column);
+
+                .product__box{
+                    width: 95%;
+                    height: 40px;
+                    margin: 0px;
+                    padding: 0px;
+                    // background-color: black;
+                    margin-top: 40px;
+                    @include flexMatch(row);
+
+                    .product{
+                        width: 50%;
+                        height: 100%;
+
+                        p{
+                            font-family: OverpassBold;
+                            font-size: 20px;
+                        }                        
+                    }
+                    .menue{
+                        width: 50%;
+                        height: 100%;
+                        z-index: 2;
+                        @include flexMatch(row);
+                        align-items: center;
+                        gap: 20px;
+
+                        p{
+                            color: $button-color;
+                            font-size: 13px;
+                            font-family: OverpassBold;
+                        }
+
+                        .allsofa{
+                            font-size: 13px;
+                            text-decoration: none;
+                            font-family: OverpassBold;
+                            color: black;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            // This is the end of the production section.
+
+            // THIS IS THE BEGINING OF EXAMPLESECTION
+            .examplesection{
+                width: 100%;
+                height: 500px;
+                background-color: white;
+                @include flexCenter(column);
+
+                .examplebox{
+                    width: 95%;
+                    height: 100%;
+                    @include flexMatch(row);
+                    gap: 10px;
+                    // background-color: blue;
+
+
+                    .first__picbox{
+                        width: 33%;
+                        height: 90%;
+                        background-color:#fee7da;
+                        @include flexMatch(column);
+                        align-items: center;
+
+                        .pictsection{
+                            width: 100%;
+                            height: 65%;
+                            background-color: transparent;
+
+                            img{
+                                margin: 0px;
+                                padding: 0px;
+                                margin-left: -30px;
+                            }
+                            
+                        }
+
+                        .pricesection{
+                            width: 90%;
+                            height: 35%;
+                            background-color: transparent;
+                            @include flexMatch(column);
+                            gap: 15px;
+                            
+
+                            h2{
+                                font-size: 17px;
+                                font-family: OverpassBold;
+                            }
+
+                            p{
+                                font-size: 13px;
+                                font-family: Overpasslight;
+                            }
+
+                            h3{
+                                font-size: 15px;
+                                font-family: OverpassBold;
+
+                                del{
+                                    color: lightgray;
+                                    text-decoration: line-through;
+                                }
+                            }
+                        }
+                    }
+
+                    .second__picbox{
+                        width: 33%;
+                        height: 90%;
+                        background-color: #dce7f6;
+                        @include flexMatch(column);
+                        align-items: center;
+                            
+
+                        .pictsection{
+                            width: 100%;
+                            height: 65%;
+                            background-color: transparent;
+
+                            img{
+                                margin: 0px;
+                                padding: 0px;
+                                margin-left: 0px;
+                                margin-top: 30px;
+                            }
+                            
+                        }
+
+                        .pricesection{
+                            width: 90%;
+                            height: 35%;
+                            background-color: transparent;
+                            @include flexMatch(column);
+                            gap: 15px;
+                            
+
+                            h2{
+                                font-size: 17px;
+                                font-family: OverpassBold;
+                            }
+
+                            p{
+                                font-size: 13px;
+                                font-family: Overpasslight;
+                            }
+
+                            h3{
+                                font-size: 15px;
+                                font-family: OverpassBold;
+
+                                del{
+                                    color: lightgray;
+                                    text-decoration: line-through;
+                                }
+                            }
+                        }
+                    }
+
+                    .third__picbox{
+                        width: 33%;
+                        height: 90%;
+                        background-color: #e9e9e7;
+                        @include flexMatch(column);
+                        align-items: center;
+
+                        .pictsection{
+                            width: 100%;
+                            height: 65%;
+                            background-color: transparent;
+
+                            img{
+                                margin: 0px;
+                                padding: 0px;
+                                margin-left: -10px;
+                            }
+                            
+                        }
+
+                        .pricesection{
+                            width: 90%;
+                            height: 35%;
+                            background-color: transparent;
+                            @include flexMatch(column);
+                            gap: 15px;
+                            
+
+                            h2{
+                                font-size: 17px;
+                                font-family: OverpassBold;
+                            }
+
+                            p{
+                                font-size: 13px;
+                                font-family: Overpasslight;
+                            }
+
+                            h3{
+                                font-size: 15px;
+                                font-family: OverpassBold;
+
+                                del{
+                                    color: lightgray;
+                                    text-decoration: line-through;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .register{
+            width: 30%;
+            height: 100%;
+            background-color: $text-color;
+
+            .advert{
+                width: 100%;
+                height: 200px;
+                @include flexCenter(column);
+
+
+                p{
+                    color: $button-color;
+                    font-family: OverpassBold;
+                    font-size: 30px;
+                }
+            }
+
+
+        }
+    }
+}

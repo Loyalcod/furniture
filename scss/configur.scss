@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+$primary-color: #a1cfe4;
+$secondary-color: #75a1b6;
+$text-color: #ffffff;
+$button-color: #fa722c;
+
+@mixin flexCenter($flexDirection){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $flexDirection;
+}
+
+@mixin flexMatch($anoflexDirection){
+    display: flex;
+    flex-direction: $anoflexDirection;
+}
+
+@mixin mobile__1080{
+    @media (max-width: 1080px){
+        @content;
+    }
+}
